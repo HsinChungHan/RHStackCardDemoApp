@@ -20,6 +20,11 @@
 		D11383152E5C08E80036811B /* RHNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = D11383142E5C08E80036811B /* RHNetwork */; };
 		D11383182E5C09010036811B /* RHNetworkAPI in Frameworks */ = {isa = PBXBuildFile; productRef = D11383172E5C09010036811B /* RHNetworkAPI */; };
 		D113831C2E5C09820036811B /* RHStackCard in Frameworks */ = {isa = PBXBuildFile; productRef = D113831B2E5C09820036811B /* RHStackCard */; };
+		D113831E2E5C0B620036811B /* DownAppServiceTests_EndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113831D2E5C0B620036811B /* DownAppServiceTests_EndToEndTests.swift */; };
+		D11383212E5C0C2C0036811B /* UserRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383202E5C0C2B0036811B /* UserRemoteService.swift */; };
+		D11383252E5C0CAD0036811B /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383242E5C0CAD0036811B /* UserDTO.swift */; };
+		D11383262E5C0EA40036811B /* UserRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383202E5C0C2B0036811B /* UserRemoteService.swift */; };
+		D11383272E5C0EE30036811B /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383242E5C0CAD0036811B /* UserDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,9 @@
 		D11382FD2E5C08A60036811B /* StackCardDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackCardDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11383012E5C08A60036811B /* StackCardDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardDemoAppUITests.swift; sourceTree = "<group>"; };
 		D11383032E5C08A60036811B /* StackCardDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D113831D2E5C0B620036811B /* DownAppServiceTests_EndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownAppServiceTests_EndToEndTests.swift; sourceTree = "<group>"; };
+		D11383202E5C0C2B0036811B /* UserRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteService.swift; sourceTree = "<group>"; };
+		D11383242E5C0CAD0036811B /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 				D11382E02E5C08A40036811B /* AppDelegate.swift */,
 				D11382E22E5C08A40036811B /* SceneDelegate.swift */,
 				D11382E42E5C08A40036811B /* ViewController.swift */,
+				D113831F2E5C0B920036811B /* RepositoryLayer */,
 				D11382E62E5C08A40036811B /* Main.storyboard */,
 				D11382E92E5C08A50036811B /* Assets.xcassets */,
 				D11382EB2E5C08A50036811B /* LaunchScreen.storyboard */,
@@ -122,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D11382F72E5C08A50036811B /* StackCardDemoAppTests.swift */,
+				D113831D2E5C0B620036811B /* DownAppServiceTests_EndToEndTests.swift */,
 			);
 			path = StackCardDemoAppTests;
 			sourceTree = "<group>";
@@ -133,6 +143,15 @@
 				D11383032E5C08A60036811B /* StackCardDemoAppUITestsLaunchTests.swift */,
 			);
 			path = StackCardDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		D113831F2E5C0B920036811B /* RepositoryLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D11383202E5C0C2B0036811B /* UserRemoteService.swift */,
+				D11383242E5C0CAD0036811B /* UserDTO.swift */,
+			);
+			path = RepositoryLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +301,8 @@
 				D11382E52E5C08A40036811B /* ViewController.swift in Sources */,
 				D11382E12E5C08A40036811B /* AppDelegate.swift in Sources */,
 				D11382E32E5C08A40036811B /* SceneDelegate.swift in Sources */,
+				D11383252E5C0CAD0036811B /* UserDTO.swift in Sources */,
+				D11383212E5C0C2C0036811B /* UserRemoteService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D113831E2E5C0B620036811B /* DownAppServiceTests_EndToEndTests.swift in Sources */,
+				D11383262E5C0EA40036811B /* UserRemoteService.swift in Sources */,
+				D11383272E5C0EE30036811B /* UserDTO.swift in Sources */,
 				D11382F82E5C08A50036811B /* StackCardDemoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
