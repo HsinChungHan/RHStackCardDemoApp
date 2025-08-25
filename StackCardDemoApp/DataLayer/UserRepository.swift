@@ -36,7 +36,7 @@ final class UserRepository: UserRepositoryProtocol {
         self.store = store
     }
 
-    // MARK: - Public
+    // MARK: - Internal APIs
     func getUsersCachedThenSync(_ completion: @escaping (Result<[UserDTO], UserRepositoryError>) -> Void) {
         store.loadAllUsers { [weak self] storeResult in
             guard let self else { return }

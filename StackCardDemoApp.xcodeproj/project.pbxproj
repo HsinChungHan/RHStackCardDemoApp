@@ -34,6 +34,10 @@
 		D11383392E5D1C950036811B /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383382E5D1C950036811B /* UserRepositoryTests.swift */; };
 		D113833B2E5D1DA00036811B /* UserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113833A2E5D1DA00036811B /* UserUsecase.swift */; };
 		D113833C2E5D1DA30036811B /* UserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113833A2E5D1DA00036811B /* UserUsecase.swift */; };
+		D113833E2E5D1E440036811B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113833D2E5D1E440036811B /* User.swift */; };
+		D113833F2E5D1EE80036811B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113833D2E5D1E440036811B /* User.swift */; };
+		D11383422E5D1FC60036811B /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383412E5D1FC60036811B /* MockUserRepository.swift */; };
+		D11383442E5D1FE60036811B /* UserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383432E5D1FE60036811B /* UserUsecaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,9 @@
 		D11383352E5D1C630036811B /* MockRemoteAndStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteAndStore.swift; sourceTree = "<group>"; };
 		D11383382E5D1C950036811B /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 		D113833A2E5D1DA00036811B /* UserUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecase.swift; sourceTree = "<group>"; };
+		D113833D2E5D1E440036811B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D11383412E5D1FC60036811B /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		D11383432E5D1FE60036811B /* UserUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				D11382F72E5C08A50036811B /* StackCardDemoAppTests.swift */,
+				D11383402E5D1FB30036811B /* DomainLayer */,
 				D11383342E5D1C3E0036811B /* DataLayer */,
 				D11383332E5D1C2A0036811B /* end-to-end-test */,
 			);
@@ -177,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				D113833A2E5D1DA00036811B /* UserUsecase.swift */,
+				D113833D2E5D1E440036811B /* User.swift */,
 			);
 			path = DomainLayer;
 			sourceTree = "<group>";
@@ -197,6 +206,15 @@
 				D11383382E5D1C950036811B /* UserRepositoryTests.swift */,
 			);
 			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		D11383402E5D1FB30036811B /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D11383412E5D1FC60036811B /* MockUserRepository.swift */,
+				D11383432E5D1FE60036811B /* UserUsecaseTests.swift */,
+			);
+			path = DomainLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +366,7 @@
 				D11382E32E5C08A40036811B /* SceneDelegate.swift in Sources */,
 				D11383322E5D18040036811B /* UserRepository.swift in Sources */,
 				D113833B2E5D1DA00036811B /* UserUsecase.swift in Sources */,
+				D113833E2E5D1E440036811B /* User.swift in Sources */,
 				D11383252E5C0CAD0036811B /* UserDTO.swift in Sources */,
 				D113832B2E5C336E0036811B /* UserStoreService.swift in Sources */,
 				D11383212E5C0C2C0036811B /* UserRemoteService.swift in Sources */,
@@ -358,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11383422E5D1FC60036811B /* MockUserRepository.swift in Sources */,
 				D113833C2E5D1DA30036811B /* UserUsecase.swift in Sources */,
 				D113831E2E5C0B620036811B /* DownAppServiceTests_EndToEndTests.swift in Sources */,
 				D11383262E5C0EA40036811B /* UserRemoteService.swift in Sources */,
@@ -368,6 +388,8 @@
 				D11383372E5D1C720036811B /* UserRepository.swift in Sources */,
 				D11383392E5D1C950036811B /* UserRepositoryTests.swift in Sources */,
 				D11383362E5D1C630036811B /* MockRemoteAndStore.swift in Sources */,
+				D11383442E5D1FE60036811B /* UserUsecaseTests.swift in Sources */,
+				D113833F2E5D1EE80036811B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
