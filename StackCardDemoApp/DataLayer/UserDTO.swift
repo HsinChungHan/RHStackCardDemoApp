@@ -15,7 +15,7 @@ import Foundation
     "profile_pic_url": "https://down-static.s3.us-west-2.amazonaws.com/picks_filter/female_v2/pic00001.jpg",
  */
 
-struct UserDTO: Codable  {
+struct UserDTO: Codable, Equatable  {
     let name: String
     let userID: Int
     let age: Int
