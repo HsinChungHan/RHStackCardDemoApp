@@ -32,8 +32,6 @@ final class UserRemoteService: UserRemoteServiceProtocol {
             [
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
             ]
-        
-        // "profile_pic_url": "https://down-static.s3.us-west-2.amazonaws.com/picks_filter/female_v2/pic00001.jpg"
         imageNetworkAPI = factory.makeNonCacheAndNoneUploadProgressClient(with: .init(string: mediaDomainUrl)!, headers: headers)
     }
     
@@ -56,7 +54,16 @@ final class UserRemoteService: UserRemoteServiceProtocol {
         }
     }
     
+    // "profile_pic_url": "https://down-static.s3.us-west-2.amazonaws.com/picks_filter/female_v2/pic00001.jpg"
     func downloadUserImage(with id: String, completion: @escaping (Result<Data, UserRemoteServiceError>) -> Void) {
-        
+        let path = "/picks_filter/female_v2/\(id).png"
+        imageNetworkAPI.get(path: path, queryItems: []) { result in
+            switch result {
+            case let .success(data, _):
+                completion(.success(data))
+            case .failure(_):
+                completion(.failure(.networkError))
+            }
+        }
     }
 }

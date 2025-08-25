@@ -23,5 +23,21 @@ class DownAppServiceTests_EndToEndTests: XCTestCase {
         }
         wait(for: [exp], timeout: 30.0)
     }
+    
+    func test_downloadUserImage_onSuccess() {
+        let sut = UserRemoteService.init()
+        let exp = expectation(description: "Wait for completion...")
+        // 
+        sut.downloadUserImage(with: "pic00001") { result in
+            switch result {
+            case let .success(data):
+                print(data)
+            default:
+                XCTFail("🚨 Expected get user's image successfully, but get failed instead!")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 30.0)
+    }
 }
 
