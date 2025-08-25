@@ -1,0 +1,68 @@
+{
+  "pins" : [
+    {
+      "identity" : "rhcachestore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHCacheStore.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "614cf7748f065604f1b253b410144de6e27f2a70"
+      }
+    },
+    {
+      "identity" : "rhcachestoreapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHCacheStoreAPI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4ffc16b15cd1925a8eccaa05dd02ff2f64b1f6f2"
+      }
+    },
+    {
+      "identity" : "rhinterface",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHInterface.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d2e7a0018154d93574ea999ccb9cf2e7f97dd9de"
+      }
+    },
+    {
+      "identity" : "rhnetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHNetwork",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3d85af75990090c50c01f3e0842a677944876e8e"
+      }
+    },
+    {
+      "identity" : "rhnetworkapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHNetworkAPI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "46feda0cda105e94a34013f31bb2ed58753b7614"
+      }
+    },
+    {
+      "identity" : "rhuicomponent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHUIComponent.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6f668ff16f129087e5e9f2eceacbf46188fa63c7"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158"
+      }
+    }
+  ],
+  "version" : 2
+}

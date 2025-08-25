@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		D11382F82E5C08A50036811B /* StackCardDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11382F72E5C08A50036811B /* StackCardDemoAppTests.swift */; };
 		D11383022E5C08A60036811B /* StackCardDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383012E5C08A60036811B /* StackCardDemoAppUITests.swift */; };
 		D11383042E5C08A60036811B /* StackCardDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383032E5C08A60036811B /* StackCardDemoAppUITestsLaunchTests.swift */; };
+		D11383122E5C08D50036811B /* RHCacheStoreAPI in Frameworks */ = {isa = PBXBuildFile; productRef = D11383112E5C08D50036811B /* RHCacheStoreAPI */; };
+		D11383152E5C08E80036811B /* RHNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = D11383142E5C08E80036811B /* RHNetwork */; };
+		D11383182E5C09010036811B /* RHNetworkAPI in Frameworks */ = {isa = PBXBuildFile; productRef = D11383172E5C09010036811B /* RHNetworkAPI */; };
+		D113831C2E5C09820036811B /* RHStackCard in Frameworks */ = {isa = PBXBuildFile; productRef = D113831B2E5C09820036811B /* RHStackCard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11383182E5C09010036811B /* RHNetworkAPI in Frameworks */,
+				D113831C2E5C09820036811B /* RHStackCard in Frameworks */,
+				D11383122E5C08D50036811B /* RHCacheStoreAPI in Frameworks */,
+				D11383152E5C08E80036811B /* RHNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +151,12 @@
 			dependencies = (
 			);
 			name = StackCardDemoApp;
+			packageProductDependencies = (
+				D11383112E5C08D50036811B /* RHCacheStoreAPI */,
+				D11383142E5C08E80036811B /* RHNetwork */,
+				D11383172E5C09010036811B /* RHNetworkAPI */,
+				D113831B2E5C09820036811B /* RHStackCard */,
+			);
 			productName = StackCardDemoApp;
 			productReference = D11382DD2E5C08A40036811B /* StackCardDemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,13 @@
 				Base,
 			);
 			mainGroup = D11382D42E5C08A40036811B;
+			packageReferences = (
+				D11383102E5C08D50036811B /* XCRemoteSwiftPackageReference "RHCacheStoreAPI" */,
+				D11383132E5C08E80036811B /* XCRemoteSwiftPackageReference "RHNetwork" */,
+				D11383162E5C09010036811B /* XCRemoteSwiftPackageReference "RHNetworkAPI" */,
+				D11383192E5C096D0036811B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D113831A2E5C09820036811B /* XCLocalSwiftPackageReference "../RHStackCard" */,
+			);
 			productRefGroup = D11382DE2E5C08A40036811B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,6 +628,70 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D113831A2E5C09820036811B /* XCLocalSwiftPackageReference "../RHStackCard" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../RHStackCard;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D11383102E5C08D50036811B /* XCRemoteSwiftPackageReference "RHCacheStoreAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HsinChungHan/RHCacheStoreAPI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D11383132E5C08E80036811B /* XCRemoteSwiftPackageReference "RHNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HsinChungHan/RHNetwork";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D11383162E5C09010036811B /* XCRemoteSwiftPackageReference "RHNetworkAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HsinChungHan/RHNetworkAPI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D11383192E5C096D0036811B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D11383112E5C08D50036811B /* RHCacheStoreAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D11383102E5C08D50036811B /* XCRemoteSwiftPackageReference "RHCacheStoreAPI" */;
+			productName = RHCacheStoreAPI;
+		};
+		D11383142E5C08E80036811B /* RHNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D11383132E5C08E80036811B /* XCRemoteSwiftPackageReference "RHNetwork" */;
+			productName = RHNetwork;
+		};
+		D11383172E5C09010036811B /* RHNetworkAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D11383162E5C09010036811B /* XCRemoteSwiftPackageReference "RHNetworkAPI" */;
+			productName = RHNetworkAPI;
+		};
+		D113831B2E5C09820036811B /* RHStackCard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RHStackCard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D11382D52E5C08A40036811B /* Project object */;
 }
