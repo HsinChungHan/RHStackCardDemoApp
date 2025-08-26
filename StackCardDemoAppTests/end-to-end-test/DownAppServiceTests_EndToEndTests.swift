@@ -27,7 +27,6 @@ class DownAppServiceTests_EndToEndTests: XCTestCase {
     func test_downloadUserImage_onSuccess() {
         let sut = UserRemoteService.init()
         let exp = expectation(description: "Wait for completion...")
-        // 
         sut.downloadUserImage(with: "pic00001") { result in
             switch result {
             case let .success(data):

@@ -15,7 +15,6 @@ final class UserStoreServiceEndToEndTest: XCTestCase {
     override func setUp() {
         super.setUp()
         sut = UserStoreService()
-        // 可選：清掉舊檔（若 RH 有對應刪除 API 可呼叫；否則讓新的 insert 覆蓋）
     }
     
     override func tearDown() {
