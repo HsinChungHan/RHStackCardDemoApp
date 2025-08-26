@@ -67,36 +67,6 @@ final class UserPageViewModel {
             }
         }
     }
-
-    /// explicit refresh method
-    func didRefreshUsers() {
-        // If there is already data on screen, set to .refreshing;
-        // otherwise keep .loading to avoid flicker
-        switch state {
-        case .loaded, .empty:
-            state = .refreshing
-        default:
-            state = .loading
-        }
-
-        usecase.refreshUsers { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case let .success(users):
-                self.userCards = UserCard.fromUsers(users, cardViewTypeName: cardViewTypeName)
-                self.notifyUsers()
-                self.state = users.isEmpty ? .empty : .loaded
-
-            case let .failure(error):
-                if self.userCards.isEmpty {
-                    self.state = .error(self.message(for: error))
-                } else {
-                    // Keep current data without flicker; the VC may show a toast/snackbar
-                    self.state = .loaded
-                }
-            }
-        }
-    }
     
     var cardDeskView: UIView { stackCardService.cardDeskViewController?.view ?? UIView() }
     
@@ -104,6 +74,10 @@ final class UserPageViewModel {
         let cardDeskViewController = stackCardService.setup(dataSource: self, delegate: self)
         stackCardService.registerCustomCardView(cardViewID: cardViewTypeName, cardViewType: UserCardView.self)
         return cardDeskViewController
+    }
+    
+    func addUserCards() {
+        stackCardService.addNewCards()
     }
 }
 
@@ -145,7 +119,7 @@ private extension UserPageViewModel {
 
 // MARK: - CardDeskViewControllerDataSource
 extension UserPageViewModel: CardDeskViewControllerDataSource {
-    var cards: [RHStackCard.Card] { self.userCards }
+    var cards: [RHStackCard.Card] { userCards }
     var domainURL: URL? { .init(string: "https://down-static.s3.us-west-2.amazonaws.com") }
 }
 

@@ -11,16 +11,17 @@ import SnapKit
 import UIKit
 
 class UserPageViewController: UIViewController {
-    lazy var stackCardService = RHStackCardInterface()
-    var cardDeskView: UIView { viewModel.cardDeskView }
-    lazy var viewModel = makeUserPageViewMdoel()
-    
+    private var cardDeskView: UIView { viewModel.cardDeskView }
+    private lazy var viewModel = makeUserPageViewMdoel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDeskCardView()
         viewModel.viewDidLoad()
     }
 }
 
+// MARK: - Private helpers
 extension UserPageViewController {
     func makeUserPageViewMdoel() -> UserPageViewModel {
         let repo = UserRepository()
@@ -29,19 +30,9 @@ extension UserPageViewController {
         viewModel.delegate = self
         return viewModel
     }
-}
-
-extension UserPageViewController: UserPageViewModelDelegate {
-    func userVM(_ vm: UserPageViewModel, didChangeState state: UserPageState) {
-    }
     
-    func userVM(_ vm: UserPageViewModel, didUpdateCards cards: [UserCard]) {
-        
-        let alreadyHasDeskVC = children.contains { $0 is CardDeskViewController }
-        guard !alreadyHasDeskVC else { return }
-        // create and add card desk VC
-        // TODO: - Add refresh method to RHStackCard framework
-        let cardDeskViewController = vm.setupDeskCardView()
+    func setupDeskCardView() {
+        let cardDeskViewController = viewModel.setupDeskCardView()
         addChild(cardDeskViewController)
         view.addSubview(cardDeskViewController.view)
         
@@ -53,5 +44,15 @@ extension UserPageViewController: UserPageViewModelDelegate {
             size: .init(width: cardWidth, height: cardWidth * 16 / 9)
         )
         cardDeskViewController.didMove(toParent: self)
+    }
+}
+
+extension UserPageViewController: UserPageViewModelDelegate {
+    func userVM(_ vm: UserPageViewModel, didChangeState state: UserPageState) {
+        // TODO: - Toggle the loading indicator based on state
+    }
+    
+    func userVM(_ vm: UserPageViewModel, didUpdateCards cards: [UserCard]) {
+        vm.addUserCards()
     }
 }
