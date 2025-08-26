@@ -21,7 +21,6 @@ final class UserCardView: CardView {
     // MARK: - Labels
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = _card.name
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 28)
         return label
@@ -29,7 +28,6 @@ final class UserCardView: CardView {
     
     private lazy var ageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Age: \(_card.age)"
         label.textColor = .white.withAlphaComponent(0.85)
         label.font = .systemFont(ofSize: 18)
         return label
@@ -37,7 +35,6 @@ final class UserCardView: CardView {
     
     private lazy var locationLabel: UILabel = {
         let label = UILabel()
-        label.text = _card.location
         label.textColor = .white.withAlphaComponent(0.85)
         label.font = .systemFont(ofSize: 18)
         return label
@@ -45,7 +42,6 @@ final class UserCardView: CardView {
     
     private lazy var aboutLabel: UILabel = {
         let label = UILabel()
-        label.text = _card.about
         label.textColor = .white
         label.font = .italicSystemFont(ofSize: 16)
         label.numberOfLines = 3
@@ -99,6 +95,23 @@ final class UserCardView: CardView {
         super.layoutSubviews()
         goToDetailVCButton.layer.cornerRadius = 22
         goToDetailVCButton.clipsToBounds = true
+    }
+    
+    override func reset() {
+        super.reset()
+        nameLabel.text = ""
+        ageLabel.text = ""
+        locationLabel.text = ""
+        aboutLabel.text = ""
+        
+    }
+    
+    override func setupCardViewInfo(withCard: Card) {
+        guard let card = card as? UserCard else { return }
+        nameLabel.text = card.name
+        ageLabel.text = "Age: \(card.age)"
+        locationLabel.text = card.location
+        aboutLabel.text = card.about
     }
     
     func makeGoToDetailVCButton() -> UIButton {
