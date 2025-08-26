@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D11382E12E5C08A40036811B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11382E02E5C08A40036811B /* AppDelegate.swift */; };
 		D11382E32E5C08A40036811B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11382E22E5C08A40036811B /* SceneDelegate.swift */; };
-		D11382E52E5C08A40036811B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11382E42E5C08A40036811B /* ViewController.swift */; };
+		D11382E52E5C08A40036811B /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11382E42E5C08A40036811B /* UserPageViewController.swift */; };
 		D11382E82E5C08A40036811B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11382E62E5C08A40036811B /* Main.storyboard */; };
 		D11382EA2E5C08A50036811B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11382E92E5C08A50036811B /* Assets.xcassets */; };
 		D11382ED2E5C08A50036811B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11382EB2E5C08A50036811B /* LaunchScreen.storyboard */; };
@@ -38,6 +38,9 @@
 		D113833F2E5D1EE80036811B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113833D2E5D1E440036811B /* User.swift */; };
 		D11383422E5D1FC60036811B /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383412E5D1FC60036811B /* MockUserRepository.swift */; };
 		D11383442E5D1FE60036811B /* UserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383432E5D1FE60036811B /* UserUsecaseTests.swift */; };
+		D11383472E5D20720036811B /* UserPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383462E5D20720036811B /* UserPageViewModel.swift */; };
+		D11383492E5D22810036811B /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11383482E5D22810036811B /* UserCard.swift */; };
+		D113834B2E5D282A0036811B /* UserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D113834A2E5D282A0036811B /* UserCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +64,7 @@
 		D11382DD2E5C08A40036811B /* StackCardDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackCardDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11382E02E5C08A40036811B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D11382E22E5C08A40036811B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D11382E42E5C08A40036811B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D11382E42E5C08A40036811B /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		D11382E72E5C08A40036811B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D11382E92E5C08A50036811B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D11382EC2E5C08A50036811B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +86,9 @@
 		D113833D2E5D1E440036811B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D11383412E5D1FC60036811B /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		D11383432E5D1FE60036811B /* UserUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecaseTests.swift; sourceTree = "<group>"; };
+		D11383462E5D20720036811B /* UserPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewModel.swift; sourceTree = "<group>"; };
+		D11383482E5D22810036811B /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
+		D113834A2E5D282A0036811B /* UserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +145,7 @@
 			children = (
 				D11382E02E5C08A40036811B /* AppDelegate.swift */,
 				D11382E22E5C08A40036811B /* SceneDelegate.swift */,
-				D11382E42E5C08A40036811B /* ViewController.swift */,
+				D11383452E5D204C0036811B /* PresenterLayer */,
 				D11383282E5C33490036811B /* DomainLayer */,
 				D113831F2E5C0B920036811B /* DataLayer */,
 				D11382E62E5C08A40036811B /* Main.storyboard */,
@@ -215,6 +221,17 @@
 				D11383432E5D1FE60036811B /* UserUsecaseTests.swift */,
 			);
 			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		D11383452E5D204C0036811B /* PresenterLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D11382E42E5C08A40036811B /* UserPageViewController.swift */,
+				D113834A2E5D282A0036811B /* UserCardView.swift */,
+				D11383462E5D20720036811B /* UserPageViewModel.swift */,
+				D11383482E5D22810036811B /* UserCard.swift */,
+			);
+			path = PresenterLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,15 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D11382E52E5C08A40036811B /* ViewController.swift in Sources */,
+				D11382E52E5C08A40036811B /* UserPageViewController.swift in Sources */,
 				D11382E12E5C08A40036811B /* AppDelegate.swift in Sources */,
+				D11383472E5D20720036811B /* UserPageViewModel.swift in Sources */,
 				D11382E32E5C08A40036811B /* SceneDelegate.swift in Sources */,
 				D11383322E5D18040036811B /* UserRepository.swift in Sources */,
 				D113833B2E5D1DA00036811B /* UserUsecase.swift in Sources */,
 				D113833E2E5D1E440036811B /* User.swift in Sources */,
 				D11383252E5C0CAD0036811B /* UserDTO.swift in Sources */,
 				D113832B2E5C336E0036811B /* UserStoreService.swift in Sources */,
+				D113834B2E5D282A0036811B /* UserCardView.swift in Sources */,
 				D11383212E5C0C2C0036811B /* UserRemoteService.swift in Sources */,
+				D11383492E5D22810036811B /* UserCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
