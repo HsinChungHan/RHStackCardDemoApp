@@ -46,6 +46,15 @@
       }
     },
     {
+      "identity" : "rhstackcard",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHStackCard",
+      "state" : {
+        "branch" : "main",
+        "revision" : "770caf85469805bcbacd510e309c822c436373df"
+      }
+    },
+    {
       "identity" : "rhuicomponent",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/HsinChungHan/RHUIComponent.git",
