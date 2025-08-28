@@ -36,7 +36,7 @@ extension UserPageViewController {
         addChild(cardDeskViewController)
         view.addSubview(cardDeskViewController.view)
         
-        let cardWidth = UIScreen.main.bounds.width - 96
+        let cardWidth = UIScreen.main.bounds.width - 32
         cardDeskViewController.view.constraint(
             centerX: view.snp.centerX,
             centerY: view.snp.centerY,
